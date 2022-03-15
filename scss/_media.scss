@@ -1,0 +1,57 @@
+@media (max-width: 1200px) {
+    .headerWrapper {
+      width: 90%;
+    }
+    .pageMain {
+      min-height: 525px;
+    }
+    .bannerInfo {
+      width: 440px;
+    }
+    .technologyHeader > h1,
+    .benefitsHeader > h1,
+    .bannerInfo > h1 {
+      font-size: 48px;
+    }
+    .technologyWrapper {
+      width: 90%;
+      padding: 30px;
+    }
+    .technologyLeft {
+      flex: 1;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .pageMain {
+      min-height: 460px;
+    }
+    .bannerInfo {
+      width: 315px;
+      margin-right: 25px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .pageMain {
+      flex-direction: column;
+      width: 93%;
+      margin-left: auto;
+      min-height: 800px;
+    }
+    .bannerLeft {
+      justify-content: center;
+      flex: 0.3;
+    }
+    .bannerInfo {
+      width: 80%;
+    }
+    .pageTechnology {
+      margin-top: 20px;
+    }
+    .technologyWrapper {
+      padding: 18px;
+      flex-direction: column;
+      width: 95%;
+    }
+  }

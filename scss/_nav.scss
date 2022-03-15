@@ -1,0 +1,64 @@
+.logo {
+    font-size: 35px;
+    color: $color_primaryDark;
+  }
+  .hamburgerMenu {
+    color: #111111;
+    font-size: 34px;
+  }
+  /* Nawigacja strony, którą ustawiamy jako niewidoczną (będzie się wysuwała kiedy poznamy JS) */
+  .headerNav {
+    display: block;
+    transform: translateX(-320px);
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:99;
+    background-color: $color_secondary;
+    min-height: 100vh;
+    width:320px;
+    transition: 0.5s;
+  }
+  .headerNav ul {
+    margin-top: 90px;
+  }
+  .headerNav li {
+    text-align: center;
+    padding: 15px 0;
+  }
+  .headerNav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: lowercase;
+  }
+  .headerNav a:hover {
+    color: $color_primaryDark;
+  }
+  .headerNav .closeMenu {
+    color: $color_white;
+    font-size: 27px;
+    display: block;
+    text-align: right;
+    margin:15px;
+    transform: rotate(0deg);
+    transition: 1s;
+    cursor: pointer;
+  }
+  .closeMenu:hover {
+    color: $color_primaryDark;
+  }
+  
+  /* header na górze strony */
+  .pageHeader {
+    padding: 18px 0px;
+  }
+  /* div wewnątrz headera, ograniczający rozmiar pudełka w któym są ikonki */
+  .headerWrapper {
+    width: 1140px;
+    display: flex;
+    margin: 0px auto;
+    justify-content: space-between;
+    align-items: center;
+  }

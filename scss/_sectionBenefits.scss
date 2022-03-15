@@ -1,0 +1,74 @@
+
+.pageBenefits {
+    background-color: #654aff;
+    padding-bottom: 75px;
+  }
+  .benefitsHeader {
+    padding-top: 75px;
+    text-align: center;
+  }
+  .benefitsHeader > h1 {
+    @include text ( 60px , 400 ,white );
+    margin-bottom: 10px;
+  }
+  .benefitsHeader > p {
+    color: white;
+    font-size: 20px;
+  }
+  .benefitsWrapper {
+    @include flexCenter;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-top: 100px;
+  }
+  .benefitsCard {
+    background-color: white;
+    width: 340px;
+    padding: 80px 32px 30px 32px;
+    text-align: center;
+    position: relative;
+    border-radius: 15px;
+  }
+  .cardIcon {
+    background-color: #f0edff;
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    top: -27px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .cardIcon > i {
+    font-size: 40px;
+  }
+  .cardIcon > i::before {
+    line-height: 94px;
+    color: #654aff;
+  }
+  .cardBody > h3 {
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    @include text (20px, 700, $color_primaryDark);
+  }
+  .cardBody > p {
+    font-size: 18px;
+    line-height: 30px;
+    color: #524b77;
+    margin-bottom: 20px;
+  }
+  .cardBody > button {
+    border: 2px solid #654aff;
+    background-color: transparent;
+    width: 105px;
+    height: 48px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #111111;
+    cursor: pointer;
+  }
+  .cardBody > button:hover {
+    border: 2px solid rgb(161, 161, 161);
+  }

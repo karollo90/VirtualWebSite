@@ -1,0 +1,485 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.pageShadow {
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.logo {
+  font-size: 35px;
+  color: #654aff;
+}
+
+.hamburgerMenu {
+  color: #111111;
+  font-size: 34px;
+}
+
+/* Nawigacja strony, którą ustawiamy jako niewidoczną (będzie się wysuwała kiedy poznamy JS) */
+.headerNav {
+  display: block;
+  -webkit-transform: translateX(-320px);
+          transform: translateX(-320px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: #111111;
+  min-height: 100vh;
+  width: 320px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.headerNav ul {
+  margin-top: 90px;
+}
+
+.headerNav li {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.headerNav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: lowercase;
+}
+
+.headerNav a:hover {
+  color: #654aff;
+}
+
+.headerNav .closeMenu {
+  color: #fff;
+  font-size: 27px;
+  display: block;
+  text-align: right;
+  margin: 15px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 1s;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.closeMenu:hover {
+  color: #654aff;
+}
+
+/* header na górze strony */
+.pageHeader {
+  padding: 18px 0px;
+}
+
+/* div wewnątrz headera, ograniczający rozmiar pudełka w któym są ikonki */
+.headerWrapper {
+  width: 1140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pageMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 591px;
+}
+
+/* lewa strona banneru (maina pod headerem) */
+.bannerLeft {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* prawa strona banneru (maina pod headerem) */
+.bannerRight {
+  background-image: url("../images/bannerImg.jpg");
+  background-size: cover;
+  background-position: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+/* div wewnątrz bannerLeft  */
+.bannerInfo {
+  width: 540px;
+}
+
+/* Tytuł strony (VR headsets) */
+.bannerInfo > h1 {
+  font-weight: 400;
+  color: #654aff;
+  margin-bottom: 20px;
+  font-size: 60px;
+  position: relative;
+  padding-top: 20px;
+}
+
+/* Pozioma kreska nad tytułem strony */
+.bannerInfo > h1::before {
+  content: "";
+  position: absolute;
+  height: 6px;
+  background-color: #654aff;
+  width: 110px;
+  top: 0;
+}
+
+/* Opis pod tytułem */
+.bannerInfo > p {
+  font-weight: 600;
+  line-height: 32px;
+  font-size: 18px;
+}
+
+/* Tekst między opisem w bannerze, a przyciskiem */
+.bannerInfo > .link {
+  font-weight: 500;
+  margin: 20px 0px;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.link > a {
+  color: #111111;
+}
+
+/* przycisk w bannerze */
+.bannerInfo > button {
+  background-color: #654aff;
+  border: none;
+  height: 50px;
+  font-size: 20px;
+  padding: 30px 60px;
+  /*line-height wysokosc na której lezy tekst */
+  line-height: 5px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+/* efekt po najechaniu na przycisk */
+.bannerInfo > button:hover {
+  background-color: transparent;
+  color: #111111;
+  border: 2px solid #a1a1a1;
+}
+
+.pageBenefits {
+  background-color: #654aff;
+  padding-bottom: 75px;
+}
+
+.benefitsHeader {
+  padding-top: 75px;
+  text-align: center;
+}
+
+.benefitsHeader > h1 {
+  font-size: 60px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.benefitsHeader > p {
+  color: white;
+  font-size: 20px;
+}
+
+.benefitsWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 60px;
+  margin-top: 100px;
+}
+
+.benefitsCard {
+  background-color: white;
+  width: 340px;
+  padding: 80px 32px 30px 32px;
+  text-align: center;
+  position: relative;
+  border-radius: 15px;
+}
+
+.cardIcon {
+  background-color: #f0edff;
+  width: 94px;
+  height: 94px;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  top: -27px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.cardIcon > i {
+  font-size: 40px;
+}
+
+.cardIcon > i::before {
+  line-height: 94px;
+  color: #654aff;
+}
+
+.cardBody > h3 {
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #654aff;
+}
+
+.cardBody > p {
+  font-size: 18px;
+  line-height: 30px;
+  color: #524b77;
+  margin-bottom: 20px;
+}
+
+.cardBody > button {
+  border: 2px solid #654aff;
+  background-color: transparent;
+  width: 105px;
+  height: 48px;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #111111;
+  cursor: pointer;
+}
+
+.cardBody > button:hover {
+  border: 2px solid #a1a1a1;
+}
+
+.pageTechnology {
+  min-height: 500px;
+}
+
+.technologyWrapper {
+  width: 1140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  padding: 70px;
+  gap: 60px;
+}
+
+.technologyLeft {
+  -webkit-box-flex: 0.8;
+      -ms-flex: 0.8;
+          flex: 0.8;
+}
+
+.technologyLeft > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.technologyRight {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.technologyHeader {
+  border-bottom: 1px solid #a3a3a3;
+  padding-bottom: 18px;
+}
+
+.technologyHeader > h3 {
+  color: #654aff;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.technologyHeader > h1 {
+  font-size: 60px;
+  font-weight: 300;
+  color: #111111;
+  letter-spacing: 4px;
+}
+
+.technologyHeader > p {
+  font-size: 16px;
+  margin: 20px 0px;
+  line-height: 30px;
+}
+
+.technologyBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  margin: 45px 0;
+}
+
+.technologyBox > .boxIcon {
+  width: 75px;
+  height: 75px;
+  background-color: #f0edff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.boxIcon > i {
+  color: #654aff;
+  font-size: 35px;
+}
+
+.technologyBox > p {
+  width: 65%;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+@media (max-width: 1200px) {
+  .headerWrapper {
+    width: 90%;
+  }
+  .pageMain {
+    min-height: 525px;
+  }
+  .bannerInfo {
+    width: 440px;
+  }
+  .technologyHeader > h1,
+  .benefitsHeader > h1,
+  .bannerInfo > h1 {
+    font-size: 48px;
+  }
+  .technologyWrapper {
+    width: 90%;
+    padding: 30px;
+  }
+  .technologyLeft {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media (max-width: 992px) {
+  .pageMain {
+    min-height: 460px;
+  }
+  .bannerInfo {
+    width: 315px;
+    margin-right: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pageMain {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 93%;
+    margin-left: auto;
+    min-height: 800px;
+  }
+  .bannerLeft {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 0.3;
+        -ms-flex: 0.3;
+            flex: 0.3;
+  }
+  .bannerInfo {
+    width: 80%;
+  }
+  .pageTechnology {
+    margin-top: 20px;
+  }
+  .technologyWrapper {
+    padding: 18px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 95%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

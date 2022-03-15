@@ -1,0 +1,81 @@
+.pageMain {
+    display: flex;
+    min-height: 591px;
+  }
+  /* lewa strona banneru (maina pod headerem) */
+  .bannerLeft {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  /* prawa strona banneru (maina pod headerem) */
+  .bannerRight {
+    background-image: url("../images/bannerImg.jpg");
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+  }
+  /* div wewnątrz bannerLeft  */
+  .bannerInfo {
+    width: 540px;
+  }
+  
+  /* Tytuł strony (VR headsets) */
+  .bannerInfo > h1 {
+    font-weight: 400;
+    color: $color_primaryDark;
+    margin-bottom: 20px;
+    font-size: 60px;
+    position: relative;
+    padding-top: 20px;
+  }
+  /* Pozioma kreska nad tytułem strony */
+  .bannerInfo > h1::before {
+    content: "";
+    position: absolute;
+    height: 6px;
+    background-color: $color_primaryDark;
+    width: 110px;
+    top: 0;
+  }
+  
+  /* Opis pod tytułem */
+  .bannerInfo > p {
+    font-weight: 600;
+    line-height: 32px;
+    font-size: 18px;
+  }
+  
+  /* Tekst między opisem w bannerze, a przyciskiem */
+  .bannerInfo > .link {
+    font-weight: 500;
+    margin: 20px 0px;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  .link > a {
+    color: #111111;
+  }
+  
+  /* przycisk w bannerze */
+  .bannerInfo > button {
+    background-color: #654aff;
+    border: none;
+    height: 50px;
+    font-size: 20px;
+    padding: 30px 60px;
+    /*line-height wysokosc na której lezy tekst */
+    line-height: 5px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  /* efekt po najechaniu na przycisk */
+  .bannerInfo > button:hover {
+    background-color: transparent;
+    color: #111111;
+    border: 2px solid rgb(161, 161, 161);
+  }
